@@ -7,7 +7,9 @@
 </head>
 <body>
     <script>
-        let UserAnwser = prompt("pease choose rock paper or sizzors");
+
+
+let UserAnwser = prompt("pease choose rock paper or sizzors");
 function getComAnswer(){
     let rn = Math.floor(Math.random() * 3);
     let rpsword = "";
@@ -23,7 +25,27 @@ function getComAnswer(){
     return rpsword
 }
 let computerAnswer = getComAnswer();
-
+if(UserAnwser === computerAnswer){
+    console.log("its a draw. you both chose " + computerAnswer);
+}
+else if(UserAnwser === 'rock' & computerAnswer === 'paper'){
+    console.log("You lose. computer chose: " + computerAnswer);
+}
+else if(UserAnwser === 'rock' & computerAnswer === 'sissors'){
+    console.log("You win. computer chose: " + computerAnswer);
+}
+else if(UserAnwser === 'paper' & computerAnswer === 'rock'){
+    console.log("You win. computer chose: " + computerAnswer);
+}
+else if(UserAnwser === 'paper' & computerAnswer === 'sissor'){
+    console.log("You lose. computer chose: " + computerAnswer);
+}
+else if(UserAnwser === 'sissors' & computerAnswer === 'rock'){
+    console.log("You lose. computer chose: " + computerAnswer);
+}
+else if(UserAnwser === 'sissors' & computerAnswer === 'paper'){
+    console.log("You win. computer chose: " + computerAnswer);
+}
     </script>
 </body>
 </html>
